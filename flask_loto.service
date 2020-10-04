@@ -4,7 +4,7 @@ Description=Servidor Scraper para loto
 [Service]
 Type=simple
 User=root
-ExecStart=/root/flask_start.sh
+ExecStart=/root/lotoScraper/flask_start.sh
 
 [Install]
 WantedBy=multi-user.target
