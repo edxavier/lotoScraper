@@ -16,6 +16,8 @@ def loto_results():
 def loto_previous_results():
     opt = webdriver.ChromeOptions()
     opt.add_argument('headless')
+    opt.add_argument('-disable-dev-shm-usage')
+    opt.add_argument('--no-sandbox')
     browser = webdriver.Chrome(options=opt)
 
     browser.get('https://www.loto.com.ni/resultados-anteriores/')
