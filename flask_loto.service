@@ -1,7 +1,11 @@
 [Unit]
 Description=Servidor Scraper para loto
+StartLimitIntervalSec=500
+StartLimitBurst=5
 
 [Service]
+Restart=on-failure
+RestartSec=5s
 Type=simple
 User=root
 ExecStart=/root/lotoScraper/flask_start.sh
