@@ -3,12 +3,13 @@ import requests
 from selenium import webdriver
 
 app = Flask(__name__)
-opt = webdriver.ChromeOptions()
+
+"""opt = webdriver.ChromeOptions()
 opt.add_argument('headless')
 opt.add_argument('-disable-dev-shm-usage')
 opt.add_argument('--no-sandbox')
 browser = webdriver.Chrome(options=opt)
-
+"""
 
 @app.route("/")
 def loto_results():
@@ -16,7 +17,7 @@ def loto_results():
     return res.text, res.status_code
 
 
-@app.route("/previous")
+"""@app.route("/previous")
 def loto_previous_results():
     try:
         browser.get('https://www.loto.com.ni/resultados-anteriores/')
@@ -27,7 +28,7 @@ def loto_previous_results():
         return html, 200
     except:
         return "", 500
-
+"""
 
 if __name__ == "__main__":
 
